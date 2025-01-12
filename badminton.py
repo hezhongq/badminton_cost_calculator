@@ -6,12 +6,21 @@ def calculate_cost():
         # Get input values
         bird_cost = float(entry_bird_cost.get())
         num_birdies = int(entry_num_birdies.get())
-        attendees = entry_attendees.get().split(",")
+        attendees = entry_attendees.get()
         
-        # Calculate results
-        num_people = len(attendees)
+        # Calculate total cost for birds
         total_cost = bird_cost * num_birdies
+
+        # check if the input is a number or list of people
+        try:
+            num_people = int(attendees)
+        except:
+            num_people = len(attendees.split(","))
+            
+
         cost_per_person = total_cost / num_people
+
+
         
         # Display the result
         result = f"{num_birdies}颗球，{num_people}个人，${cost_per_person:.2f}/人"
