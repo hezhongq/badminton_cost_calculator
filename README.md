@@ -41,14 +41,56 @@ This is a simple Python desktop application with a graphical user interface (GUI
 
 ---
 
+## Roadmap for iOS Development
+
+### Step 1: Install Prerequisites
+1. Install **Xcode** from the Mac App Store.
+2. Set up **Command Line Tools**:
+   ```bash
+   xcode-select --install
+   ```
+3. Create an Apple Developer account at [Apple Developer](https://developer.apple.com/).
+4. Enable Developer Mode on your iPhone (iOS 16+):
+   - Go to **Settings > Developer > Developer Mode**.
+
+### Step 2: Create the Project
+1. Launch Xcode and create a new project:
+   - Choose **App** under iOS.
+   - Name the project `Badminton Calculator`.
+   - Select **Storyboard** as the interface and **Swift** as the language.
+
+### Step 3: Design the Interface
+1. Open `Main.storyboard`.
+2. Add UI elements:
+   - Labels, Text Fields, a Button, and a Label for the result.
+   - Arrange them and set constraints using Auto Layout.
+
+### Step 4: Write the Logic
+1. Connect the UI elements to `ViewController.swift` using `@IBOutlet` and `@IBAction`.
+2. Add the cost calculation logic to the `calculateCost` function.
+
+### Step 5: Run and Test
+1. Connect your iPhone to your Mac via USB.
+2. Set your iPhone as the target device in Xcode.
+3. Click **Run** to test the app on your iPhone.
+
+### Step 6: Polish and Publish
+1. Test the app for responsiveness and usability.
+2. If publishing to the App Store:
+   - Go to **Product > Archive** in Xcode.
+   - Follow the submission process.
+
+---
+
 ## File Structure
-- `badminton_calculator.py`: Main Python script containing the application logic.
+- `badminton_calculator.py`: Main Python script containing the desktop application logic.
 
 ---
 
 ## Future Plans
-- Extend the project to a cross-platform mobile app using Flutter.
-- Allow users to save calculations and track their history.
+- Develop a mobile app for iOS using Swift.
+- Extend to Android using Flutter for cross-platform support.
+- Implement cloud storage for tracking past calculations.
 
 ---
 
